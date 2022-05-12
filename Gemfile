@@ -33,25 +33,23 @@ gem 'rubocop-rails', require: false
 # gem 'rack-cors'
 
 group :development, :test do
-  gem 'pry'
+  gem 'capybara'
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'rspec-rails'
-  gem 'capybara'
   gem 'launchy'
+  gem 'pry'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers' # requires config
   gem 'simplecov'
   gem 'vcr'
   gem 'webmock'
-  gem 'shoulda-matchers' # requires config
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
-
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
 end
 
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
