@@ -7,7 +7,7 @@ RSpec.describe YelpService do
     #binding.pry
   end
 
-  it 'gets a reponse with data I need', :vcr do
+  it 'gets a reponse with data in the right format', :vcr do
     response = YelpService.yelp_search("denver")
     expect(response).to be_a(Hash)
     #binding.pry
@@ -15,12 +15,18 @@ RSpec.describe YelpService do
     expect(response).to have_key(:businesses)
     expect(response).to have_key(:total)
     expect(response).to have_key(:region)
-    expect(response[:businesses]).to have_key(:location)
-    expect(response[:businesses]).to have_key(:total)
-    expect(response[:businesses]).to have_key(:phone)
-    expect(response[:businesses]).to have_key(:name)
-    expect(response[:businesses]).to have_key(:image_url)
-    expect(response[:businesses]).to have_key(:url)
-    expect(response[:businesses]).to have_key(:name)
+
+  end
+  it 'gets a reponse with data with the keys needed', :vcr do
+    response = YelpService.yelp_search("denver")
+
+    expect(response[:businesses].count).to eq(20)
+    expect(response[:businesses][0]).to have_key(:location)
+    expect(response[:businesses][0]).to have_key(:categories)
+    expect(response[:businesses][0]).to have_key(:phone)
+    expect(response[:businesses][0]).to have_key(:name)
+    expect(response[:businesses][0]).to have_key(:image_url)
+    expect(response[:businesses][0]).to have_key(:url)
+    expect(response[:businesses][0]).to have_key(:name)
   end
 end
