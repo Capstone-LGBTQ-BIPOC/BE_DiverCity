@@ -8,13 +8,13 @@ RSpec.describe YelpService do
   end
 
   it 'gets a reponse with data I need', :vcr do
-    time = Time.new(2022, 4, 25, 15, 5, 5)
-    category = entertainment
-    response = YelpService.yelp_search(category, time, "denver")
+    response = YelpService.yelp_search("denver")
     expect(response).to be_a(Hash)
-    expect(response.count).to eq(3)
+    binding.pry
+    expect(response.count).to eq(1)
     expect(response).to have_key(:businesses)
-    expect(response).to have_key(:region)
-    expect(response).to have_key(:total)
+    expect(response[:businesses]).to have_key(:location)
+    expect(response[:businesses]).to have_key(:total)
+    expect(response[:businesses]).to have_key(:phone)
   end
 end
