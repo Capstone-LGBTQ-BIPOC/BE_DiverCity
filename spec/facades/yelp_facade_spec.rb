@@ -18,7 +18,6 @@ RSpec.describe YelpFacade do
   it "checks poro attributes", :vcr do
     response = YelpFacade.location_search("denver")
     business_1 = response[0]
-    binding.pry
     expect(business_1.name).to eq("Denver Biscuit Co.")
     expect(business_1.address).to eq("3237 E Colfax Ave")
     expect(business_1.image).to eq("https://s3-media1.fl.yelpcdn.com/bphoto/bxPN9shgJEtwvT3Hrf_pCg/o.jpg")
