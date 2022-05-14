@@ -32,7 +32,7 @@ RSpec.describe YelpService do
   end
 
   it 'search by category does the voodoo it needs to', :vcr do
-    response = YelpService.search_by_category("denver", "entertainment")
+    response = YelpService.search_by_category("denver", "music")
     binding.pry
     expect(response[:businesses].count).to eq(20)
     expect(response[:businesses][0]).to have_key(:location)
