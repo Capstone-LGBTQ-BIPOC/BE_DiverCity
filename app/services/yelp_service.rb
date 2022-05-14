@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class YelpService
   class << self
     def yelp_search(location)
@@ -7,14 +9,12 @@ class YelpService
       parse_data(response)
     end
 
-
     def conn
-      Faraday.new(url: "https://api.yelp.com")
+      Faraday.new(url: 'https://api.yelp.com')
     end
 
     def parse_data(response)
       data = JSON.parse(response.body, symbolize_names: true)
     end
-
   end
 end
