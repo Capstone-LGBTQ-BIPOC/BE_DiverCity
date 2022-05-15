@@ -25,9 +25,9 @@ jobs:
     env:
       RAILS_ENV: test
       DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
-      yelp_key: {{secrets.SuperSecret}}
+      yelp_key: ${{secrets.SuperSecret}}
     steps:
-    
+
       - name: Checkout code
         uses: actions/checkout@v3
       # Add or replace dependency steps here
