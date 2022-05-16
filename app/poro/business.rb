@@ -30,6 +30,8 @@ class Business
     categories.each do |title|
       array << title[:title]
     end
+    return array
+    #binding.pry
   end
   # Name
   # Sub Category

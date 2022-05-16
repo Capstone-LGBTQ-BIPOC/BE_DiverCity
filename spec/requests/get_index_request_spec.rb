@@ -13,7 +13,6 @@ RSpec.describe "responds to a get index request", :vcr do
     expect(response).to be_successful
     expect(result[:data].count).to eq(20)
     result[:data].each do |object|
-      #binding.pry
       expect(object.keys.count).to eq(3)
       expect(object.keys).to eq(keys)
       expect(object[:attributes].keys).to eq(attr_keys)
