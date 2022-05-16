@@ -39,7 +39,7 @@ jobs:
       # Add or replace test runners here
       - name: Run tests
         env: # Or as an environment variable
-            super_secret: ${{ secrets.SuperSecret }}
+            yelp_key: ${{ secrets.SuperSecret }}
         run: bin/rake
 
   lint:
