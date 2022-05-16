@@ -18,10 +18,10 @@ RSpec.describe YelpFacade do
   it "checks poro attributes", :vcr do
     response = YelpFacade.find_category("denver", "music")
     business_1 = response[0]
-    expect(business_1.name).to eq("Tracks")
-    expect(business_1.address).to eq({:city=>"Denver", :street_address=>"3500 Walnut St", :state=>"CO", :zipcode=>"80205"})
-    expect(business_1.image).to eq("https://s3-media1.fl.yelpcdn.com/bphoto/XOdx7MblQ5tHu8ljdh8abQ/o.jpg")
-    expect(business_1.id).to eq("SyXvhYyWzhA5YH5qlqSA5g")
-    expect(business_1.sub_category).to eq(["Gay Bars", "Dance Clubs"])
+    expect(business_1.name).to eq("Denver Sweet")
+    expect(business_1.address).to eq({:city=>"Denver", :street_address=>"776 Lincoln St", :state=>"CO", :zipcode=>"80203"})
+    expect(business_1.image).to eq("https://s3-media2.fl.yelpcdn.com/bphoto/XiVNKdYZlepDO007CKzfBg/o.jpg")
+    expect(business_1.id).to eq("aLTZUOZi4a9m3v6-wH9H7A")
+    expect(business_1.sub_category).to eq(["Gay Bars", "Cocktail Bars"])
   end
 end

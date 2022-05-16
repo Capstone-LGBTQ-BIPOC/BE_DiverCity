@@ -12,7 +12,6 @@ class YelpFacade
       business_poro = poro_ize(business_list)
       business_poro2 = poro_ize(business_list2)
       test = business_poro2.zip(business_poro).flatten.compact
-      #binding.pry
     end
 
     private
