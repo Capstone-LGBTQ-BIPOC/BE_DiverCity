@@ -26,7 +26,7 @@ jobs:
       RAILS_ENV: test
       DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
       yelp_key: ${{ secrets.Yelp_Key }}
-      
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -41,7 +41,7 @@ jobs:
       # Add or replace test runners here
       - name: Run tests
         env: # Or as an environment variable
-            yelp_key: ${{ secrets.SuperSecret }}
+            yelp_key: ${{ secrets.Yelp_Key }}
         run: bin/rake
 
   lint:
