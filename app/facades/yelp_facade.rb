@@ -7,8 +7,10 @@ class YelpFacade
     end
 
     def find_category(location, category)
-      business_list = YelpService.search_by_category(location, category)
-      bussiness_poro = poro_ize(business_list)
+      business_list = YelpService.search_black_owned(location, category)
+      business_list2 = YelpService.search_lgbt_owned(location, category)
+      business_poro = poro_ize(business_list)
+      business_poro2 = poro_ize(business_list2)
     end
 
     private

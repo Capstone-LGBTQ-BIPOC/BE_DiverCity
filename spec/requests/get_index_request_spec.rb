@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "responds to a get index request", :vcr do
+RSpec.describe "responds to a get index request" do
 
-  it "searches restaurants" do
+  it "searches restaurants", :vcr do
     location = "denver"
     category = "music"
     keys = [:id, :type, :attributes]
