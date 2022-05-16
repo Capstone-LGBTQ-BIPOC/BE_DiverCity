@@ -27,9 +27,20 @@ RSpec.describe YelpService do
     expect(response[:businesses][0]).to have_key(:name)
   end
 
-  it 'search by category does the voodoo it needs to', :vcr do
-    response = YelpService.search_by_category("denver", "music")
-    #binding.pry
+  it 'search by category & lgbt, does the voodoo it needs to', :vcr do
+    response = YelpService.search_lgbt_owned("denver", "music")
+    expect(response[:businesses].count).to eq(20)
+    expect(response[:businesses][0]).to have_key(:location)
+    expect(response[:businesses][0]).to have_key(:categories)
+    expect(response[:businesses][0]).to have_key(:phone)
+    expect(response[:businesses][0]).to have_key(:name)
+    expect(response[:businesses][0]).to have_key(:image_url)
+    expect(response[:businesses][0]).to have_key(:url)
+    expect(response[:businesses][0]).to have_key(:name)
+  end
+
+  it 'search by category & black owned, does the voodoo it needs to', :vcr do
+    response = YelpService.search_black_owned("denver", "music")
     expect(response[:businesses].count).to eq(20)
     expect(response[:businesses][0]).to have_key(:location)
     expect(response[:businesses][0]).to have_key(:categories)
