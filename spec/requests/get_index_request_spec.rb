@@ -6,7 +6,7 @@ RSpec.describe "responds to a get index request", :vcr do
     location = "Denver"
     category = "Sandwhich"
     keys = [:id, :type, :attributes]
-    attr_keys = [:name, :address, :image]
+    attr_keys = [:name, :sub_category, :address, :image]
 
     get "/api/v1/businesses?location=#{location}&category=#{category}"
     result = JSON.parse(response.body, symbolize_names: true)
