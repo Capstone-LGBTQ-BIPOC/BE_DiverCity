@@ -8,7 +8,7 @@ class YelpService
     end
 
     def search_lgbt_owned(location, category)
-      response = conn.get("/v3/businesses/search?location=#{location}&term=#{category}+gay+owned") do |f|
+      response = conn.get("/v3/businesses/search?location=#{location}&term=#{category}+lgbt+owned") do |f|
         f.headers['Authorization'] = ENV['yelp_key']
       end
       parse_data(response)
