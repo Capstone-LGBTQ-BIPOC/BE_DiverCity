@@ -15,7 +15,7 @@ class YelpService
     end
 
     def search_black_owned(location, category)
-      response = conn.get("/v3/businesses/search?location=#{location}&term=#{category}+black+owned") do |f|
+      response = conn.get("/v3/businesses/search?location=#{location}&term=black+owned,#{category}") do |f|
         f.headers['Authorization'] = ENV['yelp_key']
       end
       parse_data(response)
