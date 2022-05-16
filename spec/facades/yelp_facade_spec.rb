@@ -15,16 +15,6 @@ RSpec.describe YelpFacade do
     end
   end
 
-  xit "checks poro attributes", :vcr do
-    response = YelpFacade.location_search("denver")
-    business_1 = response[0]
-    expect(business_1.name).to eq("Denver Biscuit Co.")
-    expect(business_1.address).to eq({:city=>"Denver", :street_address=>"3237 E Colfax Ave", :state=>"CO", :zipcode=>"80206"})
-    expect(business_1.image).to eq("https://s3-media1.fl.yelpcdn.com/bphoto/bxPN9shgJEtwvT3Hrf_pCg/o.jpg")
-    expect(business_1.id).to eq("gagUrh3806qc5hZ14F0Odw")
-    expect(business_1.sub_category).to eq(["Sandwiches", "Breakfast & Brunch"])
-  end
-
   it "checks poro attributes", :vcr do
     response = YelpFacade.find_category("denver", "music")
     business_1 = response[0]
