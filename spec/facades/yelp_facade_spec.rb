@@ -15,7 +15,7 @@ RSpec.describe YelpFacade do
     end
   end
 
-  it "checks poro attributes", :vcr do
+  xit "checks poro attributes", :vcr do
     response = YelpFacade.location_search("denver")
     business_1 = response[0]
     expect(business_1.name).to eq("Denver Biscuit Co.")
@@ -23,5 +23,15 @@ RSpec.describe YelpFacade do
     expect(business_1.image).to eq("https://s3-media1.fl.yelpcdn.com/bphoto/bxPN9shgJEtwvT3Hrf_pCg/o.jpg")
     expect(business_1.id).to eq("gagUrh3806qc5hZ14F0Odw")
     expect(business_1.sub_category).to eq(["Sandwiches", "Breakfast & Brunch"])
+  end
+
+  it "checks poro attributes", :vcr do
+    response = YelpFacade.find_category("denver", "music")
+    business_1 = response[0]
+    expect(business_1.name).to eq("Tracks")
+    expect(business_1.address).to eq({:city=>"Denver", :street_address=>"3500 Walnut St", :state=>"CO", :zipcode=>"80205"})
+    expect(business_1.image).to eq("https://s3-media1.fl.yelpcdn.com/bphoto/XOdx7MblQ5tHu8ljdh8abQ/o.jpg")
+    expect(business_1.id).to eq("SyXvhYyWzhA5YH5qlqSA5g")
+    expect(business_1.sub_category).to eq(["Gay Bars", "Dance Clubs"])
   end
 end
