@@ -22,10 +22,10 @@ jobs:
           POSTGRES_DB: rails_test
           POSTGRES_USER: rails
           POSTGRES_PASSWORD: password
-          yelp_key: ${{ secrets.SuperSecret }}
     env:
       RAILS_ENV: test
       DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
+      yelp_key: ${{ secrets.SuperSecret }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
