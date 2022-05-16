@@ -19,10 +19,18 @@ class Business
                 state: data[:location][:state],
                 zipcode: data[:location][:zip_code]
               }
-    @sub_category = data[:categories]
+    @sub_category = category_reducer(data[:categories])
     @hours_of_operation = nil
     @phone_number = data[:display_phone]
     @description = nil
+  end
+
+  def category_reducer(categories)
+    array = []
+    categories.each do |title|
+      array << title[:title]
+    end
+    binding.pry
   end
   # Name
   # Sub Category
