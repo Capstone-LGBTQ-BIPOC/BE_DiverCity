@@ -7,7 +7,7 @@ class YelpFacade
     end
 
     def find_category(location, category)
-      business_list = YelpService.search_by_category(location, business_list)
+      business_list = YelpService.search_by_category(location, category)
       bussiness_poro = poro_ize(business_list)
     end
 
