@@ -38,8 +38,8 @@ jobs:
         run: bin/rails db:schema:load
       # Add or replace test runners here
       - name: Run tests
-      env: # Or as an environment variable
-      super_secret: ${{ secrets.SuperSecret }}
+        env: # Or as an environment variable
+            super_secret: ${{ secrets.SuperSecret }}
         run: bin/rake
 
   lint:
