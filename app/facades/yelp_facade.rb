@@ -14,7 +14,7 @@ class YelpFacade
     private
     def poro_ize(list)
       list[:businesses].map do |result|
-        List.new(id: result[:id], name: result[:name], sub_category: result[:categories][0][:title], image: result[:image_url], address: result[:location][:display_address][0])
+        Business.new(result)
       end
     end
   end
