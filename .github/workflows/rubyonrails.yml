@@ -25,9 +25,7 @@ jobs:
     env:
       RAILS_ENV: test
       DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
-      #super_secret: {{secrets.SuperSecret}}
     steps:
-      env:
       - name: Checkout code
         uses: actions/checkout@v3
       # Add or replace dependency steps here
