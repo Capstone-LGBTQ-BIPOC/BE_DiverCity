@@ -29,7 +29,7 @@ RSpec.describe YelpService do
 
   it 'search by category & lgbt, does the voodoo it needs to', :vcr do
     response = YelpService.search_lgbt_owned("denver", "music")
-    expect(response[:businesses].count).to eq(20)
+    expect(response[:businesses].count).to eq(8)
     expect(response[:businesses][0]).to have_key(:location)
     expect(response[:businesses][0]).to have_key(:categories)
     expect(response[:businesses][0]).to have_key(:phone)
