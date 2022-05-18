@@ -31,13 +31,6 @@ class Business
       array << title[:title]
     end
     return array
-    #binding.pry
   end
-  # Name
-  # Sub Category
-  # Image
-  # Location
-  # Hours of operation
-  # Description?
-  # Phone number
+
 end
