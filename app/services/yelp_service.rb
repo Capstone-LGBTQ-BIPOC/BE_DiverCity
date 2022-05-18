@@ -21,6 +21,12 @@ class YelpService
       parse_data(response)
     end
 
+    def search_business(id)
+      response = conn.get("/v3/businesses/#{id}") do |f|
+      f.headers['Authorization'] = ENV['yelp_key']
+      end
+      parse_data(response)
+    end
 
     def conn
       Faraday.new(url: "https://api.yelp.com")
