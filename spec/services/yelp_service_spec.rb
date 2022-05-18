@@ -50,4 +50,22 @@ RSpec.describe YelpService do
     expect(response[:businesses][0]).to have_key(:url)
     expect(response[:businesses][0]).to have_key(:name)
   end
+
+  it "returns a single business", :vcr do
+    id = "w-eA1Vac8szhi3LQ44Ub6A"
+    response = YelpService.search_business(id)
+    expect(response[:id]).to eq(id)
+    expect(response[:categories]).to be_a(Array)
+    expect(response[:image_url]).to eq("https://s3-media3.fl.yelpcdn.com/bphoto/ipBWWTBDzxcfuj_6YoO1ow/o.jpg")
+
+    expect(response[:location]).to have_key(:address1)
+    expect(response[:location]).to have_key(:address2)
+    expect(response[:location]).to have_key(:city)
+    expect(response[:location]).to have_key(:zip_code)
+    expect(response).to have_key(:hours)
+    expect(response[:phone]).to eq("+17203297154")
+    expect(response[:url]).to eq("https://www.yelp.com/biz/milk-denver?adjust_creative=us0-GXhQzuMv9uLzOEXxpw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=us0-GXhQzuMv9uLzOEXxpw")
+    expect(response[:price]).to eq("$")
+    #binding.pry
+  end
 end
