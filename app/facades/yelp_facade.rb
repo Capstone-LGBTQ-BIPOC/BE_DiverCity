@@ -11,7 +11,7 @@ class YelpFacade
       business_list2 = YelpService.search_lgbt_owned(location, category)
       business_poro = poro_ize(business_list)
       business_poro2 = poro_ize(business_list2)
-      zippered_list = business_poro2.zip(business_poro).flatten.compact
+      business_poro2.zip(business_poro).flatten.compact
     end
 
     def find_business(id)
