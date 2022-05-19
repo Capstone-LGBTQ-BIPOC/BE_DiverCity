@@ -1,9 +1,9 @@
 class Merchant
 
-  attr_reader :name, :category, :sub_category, :image, :location, :hours, :phone, :url
+  attr_reader :id, :name, :category, :sub_category, :image, :location, :hours, :phone, :url, :coordinates
 
   def initialize(data)
-    #binding.pry
+    @id = data[:id]
     @name = data[:name]
     if category_reducer(data[:categories]).count > 1
       @category = category_reducer(data[:categories])[0]
@@ -16,10 +16,11 @@ class Merchant
     @hours = hours_formatter(data[:hours])
     @phone = data[:display_phone]
     @url = data[:url]
+    @coordinates = coordinate_format(data[:coordinates])
+
   end
 
   def category_reducer(categories)
-    #binding.pry
     array = []
     categories.each do |title|
       array << title[:title]
@@ -50,4 +51,8 @@ class Merchant
     schedule
   end
 
+  def coordinate_format(hash)
+    #binding.pry
+    hash
+  end
 end
