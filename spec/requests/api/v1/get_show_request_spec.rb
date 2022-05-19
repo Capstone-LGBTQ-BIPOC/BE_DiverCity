@@ -7,7 +7,7 @@ RSpec.describe "responds to a get show request" do
     keys = [:id, :type, :attributes]
     attr_keys = [:name, :category, :location, :hours, :phone, :url, :coordinates, :image, :sub_category]
 
-    get "/api/v1/business?id=#{id}"
+    get "/api/v1/businesses/#{id}"
     result = JSON.parse(response.body, symbolize_names: true)
     expect(response).to be_successful
     expect(result[:data].count).to eq(3)
