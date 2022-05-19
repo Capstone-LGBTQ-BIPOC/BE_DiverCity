@@ -54,7 +54,7 @@ jobs:
         with:
           ruby-version: 2.7.2
           bundler-cache: true
-      Add or replace any other lints here
+
       - name: Security audit dependencies
         run: bin/bundler-audit --update
       - name: Security audit application code
