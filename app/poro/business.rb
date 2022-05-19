@@ -8,17 +8,14 @@ class Business
               :phone_number,
               :description
 
-
-
   def initialize(data)
     @id = data[:id]
     @name = data[:name]
     @image = data[:image_url]
-    @address = {city: data[:location][:city],
-                street_address: data[:location][:address1],
-                state: data[:location][:state],
-                zipcode: data[:location][:zip_code]
-              }
+    @address = { city: data[:location][:city],
+                 street_address: data[:location][:address1],
+                 state: data[:location][:state],
+                 zipcode: data[:location][:zip_code] }
     @sub_category = category_reducer(data[:categories])
     @hours_of_operation = nil
     @phone_number = data[:display_phone]
@@ -30,7 +27,7 @@ class Business
     categories.each do |title|
       array << title[:title]
     end
-    return array
+    array
   end
 
 end
