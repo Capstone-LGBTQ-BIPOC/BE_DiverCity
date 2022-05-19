@@ -66,6 +66,5 @@ RSpec.describe YelpService do
     expect(response[:phone]).to eq("+17203297154")
     expect(response[:url]).to eq("https://www.yelp.com/biz/milk-denver?adjust_creative=us0-GXhQzuMv9uLzOEXxpw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=us0-GXhQzuMv9uLzOEXxpw")
     expect(response[:price]).to eq("$")
-    #binding.pry
   end
 end
