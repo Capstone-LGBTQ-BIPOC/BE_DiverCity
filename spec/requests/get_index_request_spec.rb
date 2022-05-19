@@ -12,7 +12,7 @@ RSpec.describe "responds to a get index request" do
     #binding.pry
     result = JSON.parse(response.body, symbolize_names: true)
     expect(response).to be_successful
-    expect(result[:data].count).to eq(40)
+    expect(result[:data].count).to eq(16)
     result[:data].each do |object|
       expect(object.keys.count).to eq(3)
       expect(object.keys).to eq(keys)

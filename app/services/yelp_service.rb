@@ -8,15 +8,15 @@ class YelpService
     end
 
     def search_lgbt_owned(location, category)
-      response = conn.get("/v3/businesses/search?location=#{location}&category=#{category}&term=lgbtq+owned") do |f|
-        f.headers['Authorization'] = ENV.fetch('yelp_key', nil)
+      response = conn.get("/v3/businesses/search?location=#{location}&term=lgbtq_owned,#{category}") do |f|
+        f.headers['Authorization'] = ENV['yelp_key']
       end
       parse_data(response)
     end
 
     def search_black_owned(location, category)
-      response = conn.get("/v3/businesses/search?location=#{location}&term=#{category}+black+owned") do |f|
-        f.headers['Authorization'] = ENV.fetch('yelp_key', nil)
+      response = conn.get("/v3/businesses/search?location=#{location}&term=black_owned,#{category}") do |f|
+        f.headers['Authorization'] = ENV['yelp_key']
       end
       parse_data(response)
     end
