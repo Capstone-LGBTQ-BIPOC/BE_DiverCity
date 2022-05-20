@@ -16,7 +16,7 @@
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
-
+/spec/.DS_store
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
