@@ -17,7 +17,7 @@ RSpec.describe YelpFacade do
 
   it "checks poro attributes", :vcr do
     response = YelpFacade.find_category("denver", "music")
-    #binding.pry
+    #
     business_1 = response[0]
     expect(business_1.name).to eq("Milk")
     expect(business_1.address).to eq({:city=>"Denver", :street_address=>"1037 Broadway", :state=>"CO", :zipcode=>"80203"})

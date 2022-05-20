@@ -28,7 +28,7 @@ class Business
       array << title[:title]
     end
     array
-    # binding.pry
+    # 
   end
   # Name
   # Sub Category

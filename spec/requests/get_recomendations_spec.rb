@@ -24,7 +24,7 @@ RSpec.describe "recommendations" do
         recommendation: "FOOD GOOD")
       get "/api/v1/recommendations?business_id=asdf1234"
       result = JSON.parse(response.body, symbolize_names: true)
-      binding.pry
+
     end
   end
 end
