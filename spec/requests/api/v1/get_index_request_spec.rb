@@ -9,7 +9,7 @@ RSpec.describe "responds to a get index request" do
     attr_keys = [:name, :sub_category, :address, :image]
 
     get "/api/v1/businesses?location=#{location}&category=#{category}"
-    #binding.pry
+
     result = JSON.parse(response.body, symbolize_names: true)
     expect(response).to be_successful
     expect(result[:data].count).to eq(16)
