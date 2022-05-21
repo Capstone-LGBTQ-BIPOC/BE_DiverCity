@@ -41,7 +41,6 @@ class Business
       @sub_category = category_reducer(data[:categories])
       @hours_of_operation = nil
       @phone_number = data[:display_phone]
-      @description = nil
     end
   end
 
@@ -58,7 +57,7 @@ class Business
     val = Hash.new
     hours[0][:open].each do |day|
       if day[:day] == 0
-        val["Monday"] = {open: day[:start]}, {close: day[:end]}
+        val["Monday"] = {open: day[:start], close: day[:end]}
       elsif day[:day] == 1
         val["Tuesday"] = {open: day[:start], close: day[:end]}
       elsif day[:day] == 2
@@ -73,7 +72,7 @@ class Business
         val["Sunday"] = {open:  day[:start], close: day[:end]}
       end
     end
-    array << val
+     val
   end
 
   def coordinate_format(hash)
