@@ -77,8 +77,7 @@ class Business
   end
 
   def coordinate_format(hash)
-    #binding.pry
-    hash
+    "#{hash[:latitude]}, #{hash[:longitude]}"
   end
 
 end
