@@ -14,5 +14,4 @@ RSpec.describe YelpFacade do
       expect(business.image).to be_a(String)
     end
   end
-
 end
