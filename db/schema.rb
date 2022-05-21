@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2022_05_19_204859) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+  enable_extension "plpgsql"
 
   create_table "user_recommendations", force: :cascade do |t|
     t.bigint "user_id"
@@ -38,5 +37,4 @@ ActiveRecord::Schema.define(version: 2022_05_19_204859) do
   end
 
   add_foreign_key "user_recommendations", "users"
-
 end

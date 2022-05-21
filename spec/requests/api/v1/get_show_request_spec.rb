@@ -5,7 +5,7 @@ RSpec.describe "responds to a get show request" do
   it "searches restaurants", :vcr do
     id = "w-eA1Vac8szhi3LQ44Ub6A"
     keys = [:id, :type, :attributes]
-    attr_keys = [:name, :category, :location, :hours, :phone, :url, :coordinates, :image, :sub_category]
+    attr_keys = [:name, :category, :location, :hours, :phone_number, :url, :coordinates, :image, :sub_category]
 
     get "/api/v1/businesses/#{id}"
     result = JSON.parse(response.body, symbolize_names: true)
