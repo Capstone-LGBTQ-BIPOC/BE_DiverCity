@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "recommendations" do
   describe 'post recomendations' do
     it 'creates recomdendations' do
-    user = User.create!(user_name: "some u2ser")
+    user = User.create!(user_name: "some u2ser", email: "richardLabreque@gmail.com")
     data = { "user_id": "#{user.id}","business_id": "asdf3qd", "recomendation": "great product"}
    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json'}
 
@@ -14,7 +14,7 @@ RSpec.describe "recommendations" do
 
   describe 'get recomendations' do
     it 'can get a recomendation' do
-      user = User.create!(user_name: "some u2ser")
+      user = User.create!(user_name: "some u2ser", email: "richardLabreque@gmail.com")
       rec = UserRecommendation.create(user_id: user.id,
                                       business_yelp_id: "asdf1234",
                                       recommendation: "FOOD GOOD")
