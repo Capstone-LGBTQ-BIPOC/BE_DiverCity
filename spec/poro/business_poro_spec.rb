@@ -4,7 +4,6 @@ RSpec.describe "porostuff" do
   it "returns a list of businesses with right att", :vcr do
     response = YelpFacade.find_category("denver", "music")
     business_1 = response[0]
-    binding.pry
     expect(business_1.name).to eq("Milk")
     expect(business_1.address).to eq({:city=>"Denver", :street_address=>"1037 Broadway", :state=>"CO", :zipcode=>"80203"})
     expect(business_1.image).to eq("https://s3-media3.fl.yelpcdn.com/bphoto/ipBWWTBDzxcfuj_6YoO1ow/o.jpg")
