@@ -1,24 +1,15 @@
-# README
+# DiverCity - The API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## The Index
+![business_index](assets/images/business_index_request.png)
+![business_index](assets/images/business_index_request_body.png)
+## The Business Show Page
+![business_index](assets/images/business_show_request.png)
+![business_index](assets/images/business_show_body.png)
+![business_index](assets/images/business_show_body_2.png)
 
-Things you may want to cover:
+## Posting Recommendations
+![business_index](assets/images/business_show_request.png)
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Get Businesses Recommendations
