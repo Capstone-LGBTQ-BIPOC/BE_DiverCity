@@ -26,3 +26,4 @@
 /config/application.yml
 /coverage
 /spec/fixtures
+*.DS_Store
