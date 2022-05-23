@@ -14,7 +14,7 @@ class Business
               :description
 
   def initialize(data)
-    #binding.pry
+    # 
     if data.key?(:hours)
       @id = data[:id]
       @name = data[:name]
