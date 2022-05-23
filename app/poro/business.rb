@@ -41,6 +41,7 @@ class Business
       @sub_category = category_reducer(data[:categories])
       @hours_of_operation = nil
       @phone_number = data[:display_phone]
+      @coordinates = coordinate_format(data[:coordinates])
     end
   end
 
