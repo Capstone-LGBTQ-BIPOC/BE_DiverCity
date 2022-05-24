@@ -29,6 +29,7 @@ RSpec.describe "responds to a get index request" do
 
       get "/api/v1/businesses?location=#{location}&category=#{category}"
       result = JSON.parse(response.body, symbolize_names: true)
+      require "pry"; binding.pry
       expect(response).to_not be_successful
       expect(result[:status]).to eq(404)
       expect(result[:error]).to be_a(Hash)
