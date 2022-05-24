@@ -14,6 +14,7 @@ class Business
               :description
 
   def initialize(data)
+
     @id = data[:id]
     @name = data[:name]
     if data.key?(:hours)
