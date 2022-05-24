@@ -4,8 +4,8 @@ class ErrorSerializer
   def self.api_format(result)
     { error:
       {
-        code: "#{result[:error][:code]}",
-        description:  "#{result[:error][:description]}"
+        code: (result[:error][:code]).to_s,
+        description: (result[:error][:description]).to_s
       },
       status: 404 }
   end

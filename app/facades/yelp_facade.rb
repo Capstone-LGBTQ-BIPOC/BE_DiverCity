@@ -2,9 +2,9 @@ class YelpFacade
   class << self
     def location_search(location)
       business_list = YelpService.yelp_search(location)
-      if(business_list[:error]) == nil
+      if (business_list[:error]).nil?
         poro_ize(business_list)
-      elsif(business_list[:error]).count.positive?
+      elsif (business_list[:error]).count.positive?
         business_list
       end
     end
@@ -12,7 +12,7 @@ class YelpFacade
     def find_category(location, category)
       business_list = YelpService.search_black_owned(location, category)
       business_list2 = YelpService.search_lgbt_owned(location, category)
-      if business_list[:error] == nil && business_list2[:error] == nil
+      if business_list[:error].nil? && business_list2[:error].nil?
         business_poro = poro_ize(business_list)
         business_poro2 = poro_ize(business_list2)
         business_poro2.zip(business_poro).flatten.compact.uniq(&:id)

@@ -14,7 +14,6 @@ class Business
               :description
 
   def initialize(data)
-    # 
     if data.key?(:hours)
       @id = data[:id]
       @name = data[:name]
@@ -55,29 +54,29 @@ class Business
 
   def hours_formatter(hours)
     array = []
-    val = Hash.new
+    val = {}
     hours[0][:open].each do |day|
       if day[:day] == 0
-        val["Monday"] = {open: day[:start], close: day[:end]}
+        val['Monday'] = { open: day[:start], close: day[:end] }
       elsif day[:day] == 1
-        val["Tuesday"] = {open: day[:start], close: day[:end]}
+        val['Tuesday'] = { open: day[:start], close: day[:end] }
       elsif day[:day] == 2
-        val["Wednesday"]= {open: day[:start], close: day[:end]}
+        val['Wednesday'] = { open: day[:start], close: day[:end] }
       elsif day[:day] == 3
-        val["Thursday"] = {open: day[:start], close: day[:end]}
+        val['Thursday'] = { open: day[:start], close: day[:end] }
       elsif day[:day] == 4
-        val["Friday"] = {open: day[:start], close: day[:end]}
+        val['Friday'] = { open: day[:start], close: day[:end] }
       elsif day[:day] == 5
-        val["Saturday"] = {open: day[:start], close: day[:end]}
-      else day[:day] == 6
-        val["Sunday"] = {open:  day[:start], close: day[:end]}
+        val['Saturday'] = { open: day[:start], close: day[:end] }
+      else
+        day[:day] == 6
+        val['Sunday'] = { open: day[:start], close: day[:end] }
       end
     end
-     val
+    val
   end
 
   def coordinate_format(hash)
     "#{hash[:latitude]}, #{hash[:longitude]}"
   end
-
 end
