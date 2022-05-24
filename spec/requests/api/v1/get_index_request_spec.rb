@@ -30,7 +30,7 @@ RSpec.describe "responds to a get index request" do
       get "/api/v1/businesses?location=#{location}&category=#{category}"
       result = JSON.parse(response.body, symbolize_names: true)
       expect(response).to_not be_successful
-      expect(result[:status]).to eq(404)
+      expect(response.status).to eq(404)
       expect(result[:error]).to be_a(Hash)
       expect(result[:error]).to have_key(:code)
       expect(result[:error][:code]).to eq("LOCATION_NOT_FOUND")
