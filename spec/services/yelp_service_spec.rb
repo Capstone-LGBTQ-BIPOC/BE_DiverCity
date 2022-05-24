@@ -67,4 +67,15 @@ RSpec.describe YelpService do
     # expect(response[:url]).to eq("https://www.yelp.com/biz/milk-denver?adjust_creative=us0-GXhQzuMv9uLzOEXxpw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=us0-GXhQzuMv9uLzOEXxpw")
     expect(response[:price]).to eq("$")
   end
+
+  it 'yelp service will return an error message if location cannot be found' do
+    response = YelpService.yelp_search("apple")
+    expect(response).to be_a(Hash)
+    expect(response.count).to eq(1)
+    expect(response[:error]).to be_a(Hash)
+    expect(response[:error]).to have_key(:code)
+    expect(response[:error][:code]).to eq("LOCATION_NOT_FOUND")
+    expect(response[:error]).to have_key(:description)
+    expect(response[:error][:description]).to eq("Could not execute search, try specifying a more exact location.")
+  end
 end

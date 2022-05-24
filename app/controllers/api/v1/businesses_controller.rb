@@ -1,8 +1,11 @@
 class Api::V1::BusinessesController < ApplicationController
   def index
     businesses = YelpFacade.find_category(params[:location], params[:category])
-
-    render json: BusinessListSerializer.new(businesses)
+    if businesses.instance_of?(Array)
+      render json: BusinessListSerializer.new(businesses)
+    elsif businesses.instance_of?(Hash)
+      render json: ErrorSerializer.api_format(businesses), status: :not_found
+    end
   end
 
   def show
