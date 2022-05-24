@@ -4,7 +4,7 @@ class Api::V1::BusinessesController < ApplicationController
     if businesses.instance_of?(Array)
       render json: BusinessListSerializer.new(businesses)
     elsif businesses.instance_of?(Hash)
-      render json: ErrorSerializer.api_format(businesses), status: 404
+      render json: ErrorSerializer.api_format(businesses), status: :not_found
     end
   end
 

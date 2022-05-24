@@ -6,6 +6,6 @@ class ErrorSerializer
       {
         code: (result[:error][:code]).to_s,
         description: (result[:error][:description]).to_s
-      }}
+      } }
   end
 end
