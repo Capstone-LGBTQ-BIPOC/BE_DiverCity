@@ -27,7 +27,6 @@ class YelpFacade
 
     def find_business(id)
       business = YelpService.search_business(id)
-
       Business.new(business)
     end
 

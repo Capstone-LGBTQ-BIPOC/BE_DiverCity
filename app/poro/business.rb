@@ -14,9 +14,9 @@ class Business
               :description
 
   def initialize(data)
+    @id = data[:id]
+    @name = data[:name]
     if data.key?(:hours)
-      @id = data[:id]
-      @name = data[:name]
       if category_reducer(data[:categories]).count > 1
         @category = category_reducer(data[:categories])[0]
         @sub_category = category_reducer(data[:categories])[1]
@@ -28,10 +28,7 @@ class Business
       @hours = hours_formatter(data[:hours])
       @phone_number = data[:display_phone]
       @url = data[:url]
-      @coordinates = coordinate_format(data[:coordinates])
     else
-      @id = data[:id]
-      @name = data[:name]
       @image = data[:image_url]
       @address = { city: data[:location][:city],
                    street_address: data[:location][:address1],
@@ -40,8 +37,8 @@ class Business
       @sub_category = category_reducer(data[:categories])
       @hours_of_operation = nil
       @phone_number = data[:display_phone]
-      @coordinates = coordinate_format(data[:coordinates])
     end
+    @coordinates = coordinate_format(data[:coordinates])
   end
 
   def category_reducer(categories)
@@ -53,23 +50,22 @@ class Business
   end
 
   def hours_formatter(hours)
-    array = []
     val = {}
     hours[0][:open].each do |day|
-      if day[:day] == 0
+      case day[:day]
+      when 0
         val['Monday'] = { open: day[:start], close: day[:end] }
-      elsif day[:day] == 1
+      when 1
         val['Tuesday'] = { open: day[:start], close: day[:end] }
-      elsif day[:day] == 2
+      when 2
         val['Wednesday'] = { open: day[:start], close: day[:end] }
-      elsif day[:day] == 3
+      when 3
         val['Thursday'] = { open: day[:start], close: day[:end] }
-      elsif day[:day] == 4
+      when 4
         val['Friday'] = { open: day[:start], close: day[:end] }
-      elsif day[:day] == 5
+      when 5
         val['Saturday'] = { open: day[:start], close: day[:end] }
       else
-        day[:day] == 6
         val['Sunday'] = { open: day[:start], close: day[:end] }
       end
     end
