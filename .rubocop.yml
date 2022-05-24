@@ -37,3 +37,9 @@ Metrics/MethodLength:
 
 Naming/VariableNumber:
   Enabled: false
+
+CyclomaticComplexity:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
