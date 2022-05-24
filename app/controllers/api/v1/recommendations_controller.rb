@@ -5,7 +5,7 @@ class Api::V1::RecommendationsController < ApplicationController
                                   recommendation: params[:recomendation])
     user = User.find_by(id: params[:user_id])
 
-    RecMailer.rec_email(user)
+    MailSenderJob.perform(user)
     render status: 201
   end
 
