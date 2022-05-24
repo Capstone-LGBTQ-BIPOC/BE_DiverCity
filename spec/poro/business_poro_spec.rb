@@ -29,4 +29,24 @@ RSpec.describe "porostuff" do
     expect(response.coordinates).to eq("39.7328, -104.98765")
   end
 
+  it 'can rerturn 1 business with the a monday and sunday open', :vcr do
+    id = "gagUrh3806qc5hZ14F0Odw"
+    response = YelpFacade.find_business(id)
+    expect(response.name).to eq("Denver Biscuit Co.")
+    expect(response.category).to eq("Sandwiches")
+    expect(response.sub_category).to eq("Breakfast & Brunch")
+    expect(response.image).to eq("https://s3-media1.fl.yelpcdn.com/bphoto/bxPN9shgJEtwvT3Hrf_pCg/o.jpg")
+    expect(response.location).to eq("3237 E Colfax Ave, Denver, CO 80206")
+    expect(response.hours).to eq({"Monday"=>{:open=>"0800", :close=>"1400"},
+   "Tuesday"=>{:open=>"0800", :close=>"1400"},
+   "Wednesday"=>{:open=>"0800", :close=>"1400"},
+   "Thursday"=>{:open=>"0800", :close=>"1400"},
+   "Friday"=>{:open=>"0800", :close=>"1400"},
+   "Saturday"=>{:open=>"0800", :close=>"1500"},
+   "Sunday"=>{:open=>"0800", :close=>"1500"}},)
+    expect(response.phone_number).to eq("(303) 377-7900")
+    expect(response.coordinates).to eq("39.740384, -104.949098")
+  end
+
+
 end
