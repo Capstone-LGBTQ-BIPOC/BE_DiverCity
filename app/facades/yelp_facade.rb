@@ -17,11 +17,7 @@ class YelpFacade
         business_poro2 = poro_ize(business_list2)
         business_poro2.zip(business_poro).flatten.compact.uniq(&:id)
       elsif business_list[:error].count.positive? || business_list1[:error].count.positive?
-        if business_list[:error].count.positive?
-          business_list
-        elsif business_list2[:error].count.positive?
-          business_list2
-        end
+        business_list
       end
     end
 
