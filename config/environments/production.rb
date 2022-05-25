@@ -11,8 +11,7 @@ Rails.application.configure do
                         :authentication       => "plain",
                         :enable_starttls_auto => true
                       }
-  config.action_mailer.default_url_options = { :host => ENV['
-    REDIS_URL'], protocol: 'http' }
+  config.action_mailer.default_url_options = { :host => ENV['REDIS_URL'], protocol: 'http' }
   config.cache_classes = true
 
   # Eager load code on boot. This eager loads most of Rails and
