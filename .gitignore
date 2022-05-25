@@ -27,4 +27,3 @@
 /coverage
 /spec/fixtures
 *.DS_Store
-Gemfile.lock
