@@ -33,7 +33,13 @@ Rails/UniqueValidationWithoutIndex:
   Enabled: false
 
 Metrics/MethodLength:
-  Max: 15
-  
+  Max: 25
+
 Naming/VariableNumber:
+  Enabled: false
+
+CyclomaticComplexity:
+  Enabled: false
+
+Metrics/AbcSize:
   Enabled: false

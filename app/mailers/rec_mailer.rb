@@ -7,6 +7,7 @@ class RecMailer < ApplicationMailer
   def rec_email(user, user_name)
     @user = user
     @user_name = user_name
-    mail to: @user, subject: 'Thanks for the recommendation'
+
+    mail to: @user.email, subject: 'Thanks for the recommendation'
   end
 end

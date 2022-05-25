@@ -50,7 +50,6 @@ class Business
   end
 
   def hours_formatter(hours)
-    array = []
     val = {}
     hours[0][:open].each do |day|
       case day[:day]
@@ -67,7 +66,6 @@ class Business
       when 5
         val['Saturday'] = { open: day[:start], close: day[:end] }
       else
-        day[:day] == 6
         val['Sunday'] = { open: day[:start], close: day[:end] }
       end
     end
