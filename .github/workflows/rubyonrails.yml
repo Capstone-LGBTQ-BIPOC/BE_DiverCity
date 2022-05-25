@@ -34,7 +34,7 @@ jobs:
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1 # v1.92
         with:
-          ruby-version: 2.7.x
+          ruby-version: 2.7.2
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       # Add or replace database setup steps here
       - name: install dependencies
