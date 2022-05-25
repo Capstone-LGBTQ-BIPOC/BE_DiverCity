@@ -4,8 +4,9 @@ class Api::V1::RecommendationsController < ApplicationController
                               business_yelp_id: params[:business_id],
                               recommendation: params[:recomendation])
     user = User.find_by(id: params[:user_id])
+    # binding.pry
 
-    RecMailer.rec_email(user)
+    MailSenderJob.perform_async(user.email, user.user_name)
     render status: :created
   end
 
