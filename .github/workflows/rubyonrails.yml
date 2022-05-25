@@ -51,18 +51,18 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      # Add or replace dependency steps here
       - name: Install Ruby and gems
-        uses: ruby/setup-ruby@v1  # v1.92
+        uses: ruby/setup-ruby@v1 # v1.92
         with:
-          bundler-cache: true
-          # Add or replace any other lints here
+          ruby-version: 2.7.2
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      # Add or replace database setup steps here
       - name: install dependencies
         run: bundle install
-      - name: install rubocop
-        run: bundle install rubocop 
 #       - name: Security audit dependencies
 #         run: bin/bundler-audit --update
 #       - name: Security audit application code
 #         run: bin/brakeman -q -w2
       - name: Lint Ruby files
-        run: bin/rubocop --parallel
+        run: bundle exec rubocop
