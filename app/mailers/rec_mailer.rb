@@ -8,6 +8,6 @@ class RecMailer < ApplicationMailer
     @user = user
     @user_name = user_name
 
-    mail to: @user, subject: 'Thanks for the recommendation'
+    mail to: @user, subject: I18n.t('thanks')
   end
 end
