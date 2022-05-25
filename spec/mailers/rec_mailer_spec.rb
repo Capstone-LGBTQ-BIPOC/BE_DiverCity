@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe RecMailer, type: :mailer do
   describe "Rec_email" do
     user = User.create(user_name: "rich", email: "richardLabreque@gmail.com")
-    let(:mail) { RecMailer.rec_email(user) }
+    let(:mail) { RecMailer.rec_email(user.email, user.user_name) }
 
     it "renders the headers" do
       expect(mail.subject).to eq("Thanks for the recommendation")
