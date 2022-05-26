@@ -53,11 +53,11 @@
 
 ### Gems
 
-API: [jsonapi-serializer](https://github.com/jsonapi-serializer/jsonapi-serializer) | [faraday](https://docs.faradaysec.com/) | [figaro](https://figaro.readthedocs.io/en/latest) |
+API | [jsonapi-serializer](https://github.com/jsonapi-serializer/jsonapi-serializer) | [faraday](https://docs.faradaysec.com/) | [figaro](https://figaro.readthedocs.io/en/latest) |
 
-CI/CD: [GitHub Actions](https://github.com/features/actions) | [Rubocop](https://docs.rubocop.org/rubocop/index.html) |
+CI/CD | [GitHub Actions](https://github.com/features/actions) | [Rubocop](https://docs.rubocop.org/rubocop/index.html) |
 
-Testing: [rspec-rails](https://github.com/rspec/rspec-rails) | [pry](https://github.com/pry/pry)  | [simplecov](https://github.com/simplecov-ruby/simplecov) | [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) | [faker](https://github.com/vajradog/faker-rails) | [vcr](https://www.rubydoc.info/gems/vcr/frames) | [webmock](https://github.com/bblimke/webmock) | [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers) | [capybara](https://capybara-doc.readthedocs.io/en/latest) |
+Testing | [rspec-rails](https://github.com/rspec/rspec-rails) | [pry](https://github.com/pry/pry)  | [simplecov](https://github.com/simplecov-ruby/simplecov) | [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) | [faker](https://github.com/vajradog/faker-rails) | [vcr](https://www.rubydoc.info/gems/vcr/frames) | [webmock](https://github.com/bblimke/webmock) | [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers) | [capybara](https://capybara-doc.readthedocs.io/en/latest) |
 
 
 
@@ -66,7 +66,15 @@ Testing: [rspec-rails](https://github.com/rspec/rspec-rails) | [pry](https://git
 
 ### Set Up
 
-
+On your local system, open a terminal session to run the following commands:
+1. Clone this repository:`git@github.com:Capstone-LGBTQ-BIPOC/BE_DiverCity.git`
+3. Navigate to the newly cloned directory:`cd Capstone-LGBTQ-BIPOC/BE_DiverCity`
+4. If bundler is not installed run:`gem install bundler`
+5. To install the required Gems run:`bundle install` 
+6. If errors occur, check for proper installation and versions of:`bundler`, `ruby`, and `rails`
+7. Set up the database locally with:`rails db:{drop,create, migrate, seed}`
+8. Open your text editor and check to see that `schema.rb` was created.
+9. You may also run the RSpec test suite locally with the command `bundle exec rspec` to ensure everything is functioning as expected.
 
 
 
