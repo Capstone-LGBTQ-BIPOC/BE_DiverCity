@@ -33,6 +33,7 @@
         </ul>
       </details>
     </li>
+    <li><a href="#what-is-next">What is next?</a></li>
     <li><a href="#collaborators">Collaborators</a></li>
   </ol>
 </details>
@@ -127,6 +128,15 @@ DiverCity: Inclusive Business Guide API Endpoints is the Capstone project for st
 
 
 ### Get Businesses Recommendations
+
+----------
+
+## What is next
+
+Functionality built into the application that needs API endpoint exposure:
+- Endpoint to creator a user account
+- Endpoint for a user to add a recommendation for a business
+
 
 ## Collaborators
 
