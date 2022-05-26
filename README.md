@@ -113,8 +113,9 @@ DiverCity: Inclusive Business Guide API Endpoints is the Capstone project for st
 
 ###  Business index endpoint
 ##### API Endpoint: `https://immense-falls-83363.herokuapp.com/api/v1/businesses?location=denver&category=food`
-![image (7)](https://user-images.githubusercontent.com/67713820/170568369-d43582d8-e5c8-416f-9818-6233d6a4c2bc.png)
 ![image (6)](https://user-images.githubusercontent.com/67713820/170568372-1edd969f-6e4f-4b9a-8fda-5d708137b1ab.png)
+![image (7)](https://user-images.githubusercontent.com/67713820/170568369-d43582d8-e5c8-416f-9818-6233d6a4c2bc.png)
+
 
 ### The Business show page endpoint
 ##### API Endpoint: `https://immense-falls-83363.herokuapp.com/api/v1/businesses/5G2X2q9p7QFdm-LbyutltQ`
