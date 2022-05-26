@@ -1,7 +1,7 @@
 ![DiverCity_logo](https://user-images.githubusercontent.com/67713820/170523356-d690920c-60e0-4ef3-a7d4-872e16aa350b.png)
 
 # Module 4 Capstone Back End Group Project
-# DiverCity: Inclusive Business Guide API Endpoints | [DiverCity front-end link](https://github.com/Capstone-LGBTQ-BIPOC/FE_DiverCity/edit/main/README.md)
+### DiverCity: Inclusive Business Guide: back-end Repo | [DiverCity front-end Repo](https://github.com/Capstone-LGBTQ-BIPOC/FE_DiverCity/edit/main/README.md)
 
 <details open="open">
   <summary>Table of Contents</summary>
