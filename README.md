@@ -119,6 +119,8 @@ DiverCity: Inclusive Business Guide API Endpoints is the Capstone project for st
 
 ### The Business show page endpoint
 ##### API Endpoint: `https://immense-falls-83363.herokuapp.com/api/v1/businesses/5G2X2q9p7QFdm-LbyutltQ`
+![image (3)](https://user-images.githubusercontent.com/67713820/170568382-e956c65d-59eb-4ed4-a4ca-ab6e64e6b8b9.png)
+![image (4)](https://user-images.githubusercontent.com/67713820/170568379-ed939d8f-f2c5-40b6-82a9-031c2402eae0.png)
 
 
 
@@ -131,8 +133,9 @@ DiverCity: Inclusive Business Guide API Endpoints is the Capstone project for st
 
 ### Get Businesses Recommendations
 ##### API Endpoint: `https://immense-falls-83363.herokuapp.com/api/v1/recommendations`
-![image (9)](https://user-images.githubusercontent.com/67713820/170568359-54dddd7a-95ca-443e-a45e-ff71f7fb32e6.png)
 ![image (8)](https://user-images.githubusercontent.com/67713820/170568367-c358db34-3dfc-4486-9593-ce447aef5ad6.png)
+![image (9)](https://user-images.githubusercontent.com/67713820/170568359-54dddd7a-95ca-443e-a45e-ff71f7fb32e6.png)
+
 ----------
 
 ## What is next
