@@ -111,6 +111,7 @@ DiverCity: Inclusive Business Guide API Endpoints is the Capstone project for st
 ## API Endpoints
 
 ###  Business index endpoint
+
 ![business_index](assets/images/business_index_request.png)
 ![business_index](assets/images/business_index_request_body.png)
 
