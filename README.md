@@ -22,13 +22,14 @@
       </ul>
     </li>
     <li>
-      <a href="#apis">DiverCity</a>
+      <a href="#api-endpoints">DiverCity Exposed Endpoints</a>
       <details>
         <summary>Available Endpoints</summary>
         <ul>
           <li><a href="#business-index-endpoint">Business Index Endpoint</a></li>
           <li><a href="#business-show-page-endpoint">Business Show Page Endpoint</a></li>
-          <li><a href="#users-endpoints">Users Endpoints</a></li>
+          <li><a href="#posting-business-recommendations">Posting Business Recommendations</a></li>
+          <li><a href="#get-business-recommendations">Get Business Recommendations</a></li>
         </ul>
       </details>
     </li>
@@ -65,8 +66,8 @@ Testing | [rspec-rails](https://github.com/rspec/rspec-rails) | [pry](https://gi
 ### API Key
 
 You will need to obtain and incorporate your personal API key:
-1. Visit [Yelp Fusion Api](https://www.yelp.com/developers/documentation/v3/get_started) to sign up for an account and get your secure API Key. 
-2. Complete local instalation following the instructions below. 
+1. Visit [Yelp Fusion Api](https://www.yelp.com/developers/documentation/v3/get_started) to sign up for an account and get your secure API Key
+2. Complete local instalation following the instructions below
 3. Run `bundle exec figaro install`, this will create a hiddes config/application.yml file
 4. Run `atom config/application.yml` to open the hidden file
 5. Add `yelp_key: Bearer your_key` to this file so it can be accesses as this varible name through the application
@@ -85,27 +86,43 @@ Open a terminal session and run the following commands:
 9. You may also run the RSpec test suite locally with the command `bundle exec rspec` to ensure everything is functioning as expected.
 
 
+----------
 
+## Project Description
+DiverCity: Inclusive Business Guide API Endpoints is the Capstone project for students a the Turing School of Softwarre Design. This repo is the back-end that was designed to consume external APIs and expose relevant data to the front-end team in the format requested through the JSON contract. 
 
+### Learning Goals for Project:
 
+#### Explicit
+- Expose an API that consumes data from an external data
+- Use ***** RICH explain the mail and background workers
+- Determine completion criteria based on the needs of other developers
+- Research, select, and consume an API based on your needs as a developer
 
+#### Implicit
+- Project planning
+- Reading/Writing documentation
+- Time Management/Prioritizing Work
+- Break down large project goals into manageable steps
+- GitHub workflow and project management tools
 
+----------
 
+## API Endpoints
 
-
-
-
-
-## The Index
+###  Business index endpoint
 ![business_index](assets/images/business_index_request.png)
 ![business_index](assets/images/business_index_request_body.png)
-## The Business Show Page
+
+
+
+### The Business show page endpoint
 ![business_index](assets/images/business_show_request.png)
 ![business_index](assets/images/business_show_body.png)
 ![business_index](assets/images/business_show_body_2.png)
 
-## Posting Recommendations
+### Posting business recommendations
 ![business_index](assets/images/business_show_request.png)
 
 
-## Get Businesses Recommendations
+### Get Businesses Recommendations
