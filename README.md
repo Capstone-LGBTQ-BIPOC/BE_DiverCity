@@ -14,7 +14,6 @@
         <li><a href="#gems">Important Gems</a></li>
         <li><a href="#use-of-this-repository">Use of this Repository</a>
           <ul>
-            <li>Frontend Server</li>
             <li>Backend Server</li>
           </ul>
         </li>
@@ -27,15 +26,12 @@
       </ul>
     </li>
     <li>
-      <a href="#apis">Book Club API</a>
+      <a href="#apis">DiverCity</a>
       <details>
         <summary>Available Endpoints</summary>
         <ul>
-          <li><a href="#backgrounds-endpoints">Backgrounds Endpoints</a></li>
-          <li><a href="#book-search-endpoints">Book Search Endpoints</a></li>
-          <li><a href="#forecast-endpoints">Forecast Endpoints</a></li>
-          <li><a href="#road-trip-endpoints">Road Trip Endpoints</a></li>
-          <li><a href="#sessions-endpoints">Sessions Endpoints</a></li>
+          <li><a href="#business-index-endpoint">Business Index Endpoint</a></li>
+          <li><a href="#business-show-page-endpoint">Business Show Page Endpoint</a></li>
           <li><a href="#users-endpoints">Users Endpoints</a></li>
         </ul>
       </details>
@@ -57,11 +53,11 @@
 
 ### Gems
 
-API | [jsonapi-serializer](https://github.com/fotinakis/jsonapi-serializers), [faraday](https://github.com/lostisland/faraday), [figaro] (https://medium.com/@MinimalGhost/the-figaro-gem-an-easier-way-to-securely-configure-rails-applications-c6f963b7e993)
+API: [jsonapi-serializer](https://github.com/jsonapi-serializer/jsonapi-serializer) | [faraday](https://docs.faradaysec.com/) | [figaro](https://figaro.readthedocs.io/en/latest) |
 
-CI/CD | [GitHub Actions](https://docs.rubocop.org/rubocop/index.html](https://github.com/features/actions), [Rubocop](https://docs.rubocop.org/rubocop/index.html)
+CI/CD: [GitHub Actions](https://github.com/features/actions) | [Rubocop](https://docs.rubocop.org/rubocop/index.html) |
 
-Testing | [rspec-rails](https://github.com/rspec/rspec-rails), [simplecov](https://github.com/simplecov-ruby/simplecov), [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails), [faker](https://github.com/vajradog/faker-rails), [webmock](https://github.com/bblimke/webmock), [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers)
+Testing: [rspec-rails](https://github.com/rspec/rspec-rails) | [pry](https://github.com/pry/pry)  | [simplecov](https://github.com/simplecov-ruby/simplecov) | [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) | [faker](https://github.com/vajradog/faker-rails) | [vcr](https://www.rubydoc.info/gems/vcr/frames) | [webmock](https://github.com/bblimke/webmock) | [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers) | [capybara](https://capybara-doc.readthedocs.io/en/latest) |
 
 
 
