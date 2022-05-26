@@ -8,14 +8,10 @@
   <ol>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#set-up">Set Up</a></li>
+      <ul>  
         <li><a href="#versions">Versions</a></li>
         <li><a href="#gems">Important Gems</a></li>
-        <li><a href="#use-of-this-repository">Use of this Repository</a>
-          <ul>
-            <li>Backend Server</li>
-          </ul>
+        <li><a href="#set-up">Set Up</a></li>
         </li>
     </li>
     </ul>
@@ -66,14 +62,26 @@ Testing | [rspec-rails](https://github.com/rspec/rspec-rails) | [pry](https://gi
 
 ### Set Up
 
-On your local system, open a terminal session to run the following commands:
+### API Key
+
+You will need to obtain and incorporate your personal API key:
+1. Visit [Yelp Fusion Api](https://www.yelp.com/developers/documentation/v3/get_started) to sign up for an account and get your secure API Key. 
+2. Complete local instalation following the instructions below. 
+3. Run `bundle exec figaro install`, this will create a hiddes config/application.yml file
+4. Run `atom config/application.yml` to open the hidden file
+5. Add `yelp_key: Bearer your_key` to this file so it can be accesses as this varible name through the application
+6. Close the file
+
+### Local set up
+
+Open a terminal session and run the following commands:
 1. Clone this repository:`git@github.com:Capstone-LGBTQ-BIPOC/BE_DiverCity.git`
 3. Navigate to the newly cloned directory:`cd Capstone-LGBTQ-BIPOC/BE_DiverCity`
 4. If bundler is not installed run:`gem install bundler`
 5. To install the required Gems run:`bundle install` 
 6. If errors occur, check for proper installation and versions of:`bundler`, `ruby`, and `rails`
 7. Set up the database locally with:`rails db:{drop,create, migrate, seed}`
-8. Open your text editor and check to see that `schema.rb` was created.
+8. Open your text editor and check to see that `schema.rb` was created
 9. You may also run the RSpec test suite locally with the command `bundle exec rspec` to ensure everything is functioning as expected.
 
 
