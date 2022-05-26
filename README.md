@@ -126,3 +126,15 @@ DiverCity: Inclusive Business Guide API Endpoints is the Capstone project for st
 
 
 ### Get Businesses Recommendations
+
+## Collaborators
+
+💻  Joseph Galvin |  [GitHub](https://github.com/jwgalvin) | [LinkedIn](https://www.linkedin.com/in/josephwgalvin) |
+
+💻  Richard LaBrecque |  [GitHub](https://github.com/RichardLaBrecque) | [LinkedIn](https://www.linkedin.com/in/rich-labrecque) |
+
+💻  Tamara Dowis |  [GitHub](https://github.com/wanderlust-create) | [LinkedIn](https://www.linkedin.com/in/tamara-dowis) |
+
+
+
+
