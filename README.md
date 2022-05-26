@@ -112,22 +112,25 @@ DiverCity: Inclusive Business Guide API Endpoints is the Capstone project for st
 ## API Endpoints
 
 ###  Business index endpoint
-
-![business_index](assets/images/business_index_request.png)
-![business_index](assets/images/business_index_request_body.png)
-
-
+##### API Endpoint: `https://immense-falls-83363.herokuapp.com/api/v1/businesses?location=denver&category=food`
+![image (7)](https://user-images.githubusercontent.com/67713820/170568369-d43582d8-e5c8-416f-9818-6233d6a4c2bc.png)
+![image (6)](https://user-images.githubusercontent.com/67713820/170568372-1edd969f-6e4f-4b9a-8fda-5d708137b1ab.png)
 
 ### The Business show page endpoint
-![business_index](assets/images/business_show_request.png)
-![business_index](assets/images/business_show_body.png)
-![business_index](assets/images/business_show_body_2.png)
+##### API Endpoint: `https://immense-falls-83363.herokuapp.com/api/v1/businesses/5G2X2q9p7QFdm-LbyutltQ`
+![image (9)](https://user-images.githubusercontent.com/67713820/170568359-54dddd7a-95ca-443e-a45e-ff71f7fb32e6.png)
+![image (8)](https://user-images.githubusercontent.com/67713820/170568367-c358db34-3dfc-4486-9593-ce447aef5ad6.png)
+
 
 ### Posting business recommendations
-![business_index](assets/images/business_show_request.png)
+##### API Endpoint: `https://immense-falls-83363.herokuapp.com/api/v1/recommendations?business_id=5G2X2q9p7QFdm-LbyutltQ`
+![image (10)](https://user-images.githubusercontent.com/67713820/170568311-f8387d68-eb8a-4a20-a610-427588d68bb1.png)
+![image (11)](https://user-images.githubusercontent.com/67713820/170568292-6d6f6a5e-3379-4929-83dd-c2f1f9c42fcf.png)
+
 
 
 ### Get Businesses Recommendations
+##### API Endpoint: `https://immense-falls-83363.herokuapp.com/api/v1/recommendations`
 
 ----------
 
